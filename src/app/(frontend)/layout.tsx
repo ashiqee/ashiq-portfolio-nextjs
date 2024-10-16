@@ -1,16 +1,30 @@
 import { Navbar } from "@/components/navbar";
 
 export default function PricingLayout({
-  children,
+  banner,
+  about,
+  work,
+  contact,
 }: {
-  children: React.ReactNode;
+  banner: React.ReactNode;
+  about: React.ReactNode;
+  work: React.ReactNode;
+  contact: React.ReactNode;
 }) {
   return (
-    <section>
-      <Navbar/>
-      <div>
-        {children}
-      </div>
-    </section>
+    <>
+      <Navbar />
+      <section className=" h-screen bg-slate-700/15">{banner}</section>
+
+      <section className="h-screen pt-20" id="about">
+        {about}
+      </section>
+      <section className="h-screen pt-20" id="work">
+        {work}
+      </section>
+      <section className="h-screen pt-20" id="contact">
+        {contact}
+      </section>
+    </>
   );
 }

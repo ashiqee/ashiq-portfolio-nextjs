@@ -40,7 +40,7 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <main>{children}</main>
+          <main className="bg-gradient-to-bl from-sky-900/45 to-slate-900/25">{children}</main>
         </Providers>
       </body>
     </html>
